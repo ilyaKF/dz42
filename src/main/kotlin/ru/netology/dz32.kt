@@ -31,7 +31,7 @@ fun discount(
             MASTERCARD, MAESTRO -> result =
                 if (300_00 < sumInMonth && sumInMonth < 75_000_00) 0 else (amountTransaction * 0.006 + 20_00).toInt()
             VISA, MIR -> result =
-                if (amountTransaction * 0.0075 < 35_00) (amountTransaction * 0.0075).toInt() else 35_00
+                if (amountTransaction * 0.0075 > 35_00) (amountTransaction * 0.0075).toInt() else 35_00
             VK_PAY -> result = 0
             else -> result = 0
         }
