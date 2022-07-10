@@ -157,4 +157,35 @@ class Dz32KtTest {
         assertEquals(75_00, result)
 
     }
+
+    @Test
+    fun discount_default() {
+        //arrange
+
+        //act
+        val result = discount()
+
+        //assert
+        assertEquals(0, result)
+
+    }
+
+    @Test
+    fun discount_unknown_card() {
+        //arrange
+        val typeCardTest = "Card"
+        val sumInManthTest = 0
+        val amountTransactionTest = 10_000_00
+
+        //act
+        val result = discount(
+            typeCard = typeCardTest,
+            sumInMonth = sumInManthTest,
+            amountTransaction = amountTransactionTest
+        )
+
+        //assert
+        assertEquals(0, result)
+
+    }
 }

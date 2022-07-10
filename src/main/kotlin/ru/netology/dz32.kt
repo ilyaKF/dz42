@@ -17,7 +17,7 @@ fun main() {
 fun discount(
     typeCard: String = VK_PAY,
     sumInMonth: Int = 0,
-    amountTransaction: Int
+    amountTransaction: Int = 0
 ): Int {
     var result = 0
     if (typeCard != VK_PAY && (amountTransaction > MAX_LIMIT_IN_DAY || (amountTransaction + sumInMonth) > MAX_LIMIT_IN_MONTH )) {
