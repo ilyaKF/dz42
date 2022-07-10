@@ -97,7 +97,7 @@ class Dz32KtTest {
         )
 
         //assert
-        assertEquals(0, result)
+        assertEquals("0", result)
 
     }
 
